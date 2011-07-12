@@ -1,0 +1,5 @@
+category: Graphics
+requires: libgcc1 libilmbase6 libIlmCtl2 libIlmImf6 libIlmImfCtl2 libstdc++6
+sdesc: "OpenEXR Color Transformation Language tools"
+ldesc: "IlmImfCtl provides a simplified OpenEXR interface to the Color 
+Transformation Language."

@@ -2,9 +2,13 @@ DESCRIPTION="Color Transformation Language runtime"
 HOMEPAGE="http://ampasctl.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ampasctl/${P}.tar.gz"
 
-abi=2
-PKG_NAMES="${PN} libilmctl${abi} libilmctl-devel"
-PKG_HINTS="setup lib devel"
-PKG_CONTENTS[0]='usr/share/'
-PKG_CONTENTS[1]="usr/bin/*-${abi}.dll"
-PKG_CONTENTS[2]='usr/include/ usr/lib/'
+PATCH_URI="1.0.1-pkgconfig.patch
+           1.0.1-gcc45.patch"
+
+PKG_NAMES="${PN} libIlmImfCtl2 libIlmImfCtl-devel"
+openexr_ctl_CONTENTS="usr/bin/*.exe usr/lib/CTL/ usr/share/"
+libIlmImfCtl2_CONTENTS="usr/bin/cygIlmImfCtl-2.dll"
+libIlmImfCtl_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
+
+# macro test code doesn't compile with g++-4.5
+CYGCONF_ARGS="--disable-openexrtest --disable-ctltest"
