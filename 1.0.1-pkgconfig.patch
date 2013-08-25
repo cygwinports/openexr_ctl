@@ -1,9 +1,0 @@
---- origsrc/openexr_ctl-1.0.1/OpenEXR_CTL.pc.in	2007-07-12 23:42:05.000000000 -0500
-+++ src/openexr_ctl-1.0.1/OpenEXR_CTL.pc.in	2007-10-29 21:40:55.765625000 -0500
-@@ -7,5 +7,5 @@
- Name: OpenEXR_CTL
- Description: Simplified OpenEXR interface to CTL
- Version: @OPENEXR_CTL_VERSION@
--Libs: -L${libdir} -lIlmImfCtl @OPENEXR_LDFLAGS@ @CTL_LDFLAGS@
-+Libs: -L${libdir} -lIlmImfCtl @OPENEXR_LIBS@ @CTL_LIBS@
- Cflags: @CTL_CXXFLAGS_PC@ @OPENEXR_CXXFLAGS@ -I${OpenEXR_includedir}

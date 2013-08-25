@@ -1,6 +1,0 @@
-category: Graphics
-requires: libIlmImfCtl2 libilmbase-devel libIlmCtl-devel libIlmImf-devel
-external-source: openexr_ctl
-sdesc: "OpenEXR Color Transformation Language interface (development)"
-ldesc: "IlmImfCtl provides a simplified OpenEXR interface to the Color 
-Transformation Language."
