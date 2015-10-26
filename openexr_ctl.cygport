@@ -1,6 +1,6 @@
 NAME="openexr_ctl"
 VERSION=1.0.1
-RELEASE=2
+RELEASE=3
 CATEGORY="Libs"
 SUMMARY="OpenEXR Color Transformation Language interface"
 DESCRIPTION="IlmImfCtl provides a simplified OpenEXR interface to the Color
@@ -12,11 +12,14 @@ PATCH_URI="
 	http://pkgs.fedoraproject.org/cgit/OpenEXR_CTL.git/plain/openexr_ctl-1.0.1-gcc43.patch
 	http://pkgs.fedoraproject.org/cgit/OpenEXR_CTL.git/plain/openexr_ctl-1.0.1-gcc44.patch
 	http://pkgs.fedoraproject.org/cgit/OpenEXR_CTL.git/plain/openexr_ctl-1.0.1-pkgconfig.patch
+	http://pkgs.fedoraproject.org/cgit/OpenEXR_CTL.git/plain/openexr_ctl-1.0.1-namespace.patch
 "
-PKG_NAMES="${NAME} libIlmImfCtl2 libIlmImfCtl-devel"
+PKG_NAMES="${NAME} libIlmImfCtl2 libIlmImfCtl-common libIlmImfCtl-devel"
 openexr_ctl_CATEGORY="Graphics"
-openexr_ctl_CONTENTS="usr/bin/*.exe usr/lib/CTL/ usr/share/"
+openexr_ctl_CONTENTS="usr/bin/*.exe usr/share/"
+libIlmImfCtl2_REQUIRES="libIlmImfCtl-common"
 libIlmImfCtl2_CONTENTS="usr/bin/cygIlmImfCtl-2.dll"
+libIlmImfCtl_common_CONTENTS="usr/lib/CTL/"
 libIlmImfCtl_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
 
 # macro test code doesn't compile with g++-4.5
